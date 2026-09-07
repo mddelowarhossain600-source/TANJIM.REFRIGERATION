@@ -4,1749 +4,1233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TANJIM REFRIGERATION</title>
+<title>TANJIM REFRIGERATION | AC & Electrical Service</title>
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#020b18;
-    color:#ffffff;
-    overflow-x:auto;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#eef7ff;
+  color:#06284f;
 }
-
-/* Desktop style on mobile */
-.page{
-    min-width:1050px;
-}
-
-body:before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-2;
-    background:
-        linear-gradient(rgba(0,119,255,.035) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(0,119,255,.035) 1px,transparent 1px);
-    background-size:35px 35px;
-}
-
-body:after{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    left:50%;
-    top:20%;
-    transform:translateX(-50%);
-    background:rgba(0,119,255,.08);
-    filter:blur(120px);
-    border-radius:50%;
-    z-index:-3;
-}
-
 
 /* ================= HEADER ================= */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(2,11,24,.94);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(0,160,255,.25);
-}
-
-.nav{
-    width:1100px;
-    max-width:calc(100% - 40px);
-    min-width:1000px;
-    margin:auto;
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  background:#031d3b;
+  height:95px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 4.5%;
+  border-bottom:2px solid #087eea;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
 .logo-area{
-    display:flex;
-    align-items:center;
-    gap:14px;
+  display:flex;
+  align-items:center;
+  gap:13px;
 }
 
-.logo{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    border-radius:12px;
+.logo-area img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
 }
 
-.brand{
-    font-weight:900;
-    font-size:20px;
-    letter-spacing:1px;
+.logo-text h1{
+  color:white;
+  font-size:30px;
+  line-height:27px;
+  font-weight:800;
 }
 
-.brand small{
-    display:block;
-    color:#26a9ff;
-    font-size:11px;
-    letter-spacing:2px;
-    margin-top:3px;
+.logo-text h1 span{
+  color:#0797ff;
+}
+
+.logo-text p{
+  color:#d8e9f7;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-top:7px;
+}
+
+nav{
+  display:flex;
+  gap:35px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+  padding:10px 0;
+}
+
+nav a:hover{
+  color:#0797ff;
 }
 
 .language{
-    display:flex;
-    gap:8px;
+  display:flex;
+  background:#f3f8ff;
+  border-radius:30px;
+  overflow:hidden;
 }
 
-.lang-btn{
-    border:1px solid #168eff;
-    background:transparent;
-    color:#fff;
-    padding:9px 17px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
+.language button{
+  border:0;
+  padding:11px 18px;
+  font-weight:bold;
+  background:transparent;
+  color:#06284f;
+  cursor:pointer;
 }
 
-.lang-btn.active{
-    background:#087ee8;
-    box-shadow:0 0 18px rgba(0,145,255,.45);
+.language button.active{
+  background:#0797ff;
+  color:white;
 }
-
-
-/* ================= LANGUAGE ================= */
-
-[hidden]{
-    display:none !important;
-}
-
-
-/* ================= COMMON ================= */
-
-.container{
-    width:1100px;
-    max-width:calc(100% - 40px);
-    min-width:1000px;
-    margin:auto;
-}
-
-.section{
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    font-size:36px;
-    margin-bottom:12px;
-}
-
-.section-title p{
-    color:#8fa9c2;
-}
-
 
 /* ================= HERO ================= */
 
 .hero{
-    padding:75px 0 60px;
+  min-height:440px;
+  background:
+    radial-gradient(circle at 80% 40%,#086fc9 0%,transparent 35%),
+    linear-gradient(120deg,#031c39,#062f5c 60%,#004b8d);
+  color:white;
+  padding:35px 4.5%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:30px;
+  overflow:hidden;
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.hero-left{
+  max-width:600px;
 }
 
-.badge{
-    display:inline-block;
-    border:1px solid rgba(20,154,255,.5);
-    background:rgba(0,130,255,.08);
-    color:#4db8ff;
-    padding:9px 18px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:20px;
+.hero-small{
+  color:#9edaff;
+  font-size:20px;
+  font-weight:bold;
+  line-height:1.5;
+  margin-bottom:10px;
 }
 
-.hero h1{
-    font-size:56px;
-    line-height:1.08;
-    margin-bottom:20px;
+.hero h2{
+  font-size:58px;
+  line-height:1;
+  margin:8px 0;
+  font-weight:900;
 }
 
-.hero h1 span{
-    color:#19a5ff;
-    text-shadow:0 0 25px rgba(0,157,255,.45);
+.hero h2 span{
+  color:#079cff;
 }
 
-.hero p{
-    color:#9bb2c9;
-    font-size:18px;
-    line-height:1.7;
-    max-width:600px;
+.hero-sub{
+  font-size:18px;
+  font-weight:bold;
+  margin:15px 0 25px;
+}
+
+.hero-points{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.point{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:13px;
+  color:white;
+}
+
+.point-icon{
+  color:#08a1ff;
+  font-size:25px;
 }
 
 .hero-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:30px;
+  display:flex;
+  gap:12px;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+.call-btn,
+.wa-btn{
+  border:0;
+  border-radius:40px;
+  padding:15px 25px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:17px;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
 }
 
-.btn-primary{
-    background:#087fe8;
-    color:white;
-    box-shadow:0 0 25px rgba(0,132,255,.3);
+.call-btn{
+  background:#ff1735;
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 35px rgba(0,132,255,.6);
+.wa-btn{
+  background:#16c866;
 }
 
-.btn-outline{
-    border:1px solid #168eff;
-    color:#fff;
+.hero-image{
+  position:relative;
+  height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.btn-outline:hover{
-    background:#087fe8;
+.hero-image img{
+  width:100%;
+  max-width:570px;
+  height:350px;
+  object-fit:cover;
+  border-radius:12px;
+  border:1px solid #3d9eea;
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
+/* ================= SECTION ================= */
 
-/* HERO IMAGE */
-
-.hero-photo{
-    height:420px;
-    border-radius:25px;
-    overflow:hidden;
-    position:relative;
-    border:1px solid rgba(0,157,255,.35);
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
+.section{
+  padding:28px 4%;
 }
 
-.hero-photo img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transform:scale(1.05);
-    transition:opacity 1s ease, transform 5s ease;
+.section-title{
+  text-align:left;
+  margin-bottom:22px;
 }
 
-.hero-photo img.active{
-    opacity:1;
-    transform:scale(1);
+.section-title h2{
+  font-size:30px;
+  color:#06284f;
 }
 
-.photo-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,10,25,.85),
-        transparent 60%
-    );
+.section-title h2 span{
+  color:#0797ff;
 }
 
-.hero-photo-title{
-    position:absolute;
-    bottom:25px;
-    left:25px;
-    right:25px;
-    z-index:2;
+.section-title p{
+  color:#52708f;
+  margin-top:5px;
 }
-
-.hero-photo-title span{
-    color:#42b5ff;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.hero-photo-title h3{
-    font-size:27px;
-    margin-top:6px;
-}
-
-
-/* ================= MOVING NOTICE ================= */
-
-.notice{
-    border-top:1px solid rgba(0,145,255,.2);
-    border-bottom:1px solid rgba(0,145,255,.2);
-    overflow:hidden;
-    background:rgba(0,110,220,.05);
-}
-
-.notice-track{
-    display:flex;
-    width:max-content;
-    animation:noticeMove 25s linear infinite;
-}
-
-.notice-item{
-    padding:16px 45px;
-    color:#b8dfff;
-    font-weight:bold;
-    white-space:nowrap;
-}
-
-.notice-item strong{
-    color:#18a5ff;
-}
-
-@keyframes noticeMove{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
-
-/* ================= WORK SHOWCASE ================= */
-
-.showcase{
-    padding:65px 0;
-}
-
-.showcase-box{
-    overflow:hidden;
-    position:relative;
-    padding:20px 0;
-}
-
-.showcase-box:before,
-.showcase-box:after{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    width:100px;
-    z-index:5;
-    pointer-events:none;
-}
-
-.showcase-box:before{
-    left:0;
-    background:linear-gradient(to right,#020b18,transparent);
-}
-
-.showcase-box:after{
-    right:0;
-    background:linear-gradient(to left,#020b18,transparent);
-}
-
-.showcase-track{
-    display:flex;
-    width:max-content;
-    animation:workSlide 38s linear infinite;
-}
-
-.showcase-group{
-    display:flex;
-    gap:22px;
-    padding-right:22px;
-}
-
-.showcase-card{
-    width:250px;
-    height:190px;
-    flex-shrink:0;
-    position:relative;
-    overflow:hidden;
-    border-radius:18px;
-    border:1px solid rgba(0,155,255,.35);
-    background:#071525;
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
-}
-
-.showcase-card img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.showcase-card:hover img{
-    transform:scale(1.08);
-}
-
-.showcase-label{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    padding:35px 15px 13px;
-    background:linear-gradient(transparent,rgba(0,0,0,.9));
-    font-weight:bold;
-    font-size:15px;
-}
-
-@keyframes workSlide{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
 
 /* ================= SERVICES ================= */
 
 .services{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+  background:#f2f9ff;
 }
 
-.service-card{
-    position:relative;
-    overflow:hidden;
-    background:linear-gradient(
-        145deg,
-        rgba(12,31,52,.95),
-        rgba(4,16,29,.95)
-    );
-    border:1px solid rgba(0,145,255,.2);
-    border-radius:18px;
-    transition:.35s;
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
 
-.service-card:hover{
-    transform:translateY(-8px);
-    border-color:#139bff;
-    box-shadow:0 15px 40px rgba(0,130,255,.16);
+.card{
+  background:#e5f3ff;
+  border:1px solid #bcdcf2;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.3s;
 }
 
-.service-card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,70,130,.15);
 }
 
-.service-content{
-    padding:20px;
+.card-img{
+  height:150px;
+  overflow:hidden;
 }
 
-.service-content h3{
-    font-size:18px;
-    margin-bottom:8px;
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
 }
 
-.service-content p{
-    color:#829ab0;
-    font-size:14px;
-    line-height:1.5;
+.card:hover img{
+  transform:scale(1.06);
 }
 
-
-/* ================= ABOUT ================= */
-
-.about-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    background:linear-gradient(
-        145deg,
-        rgba(7,28,48,.9),
-        rgba(3,15,27,.9)
-    );
-    border:1px solid rgba(0,145,255,.25);
-    border-radius:25px;
-    padding:45px;
+.card-content{
+  padding:12px;
 }
 
-.about-box h2{
-    font-size:32px;
-    margin-bottom:18px;
+.card-title{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-bottom:8px;
 }
 
-.about-box p{
-    color:#94aac0;
-    line-height:1.8;
+.card-icon{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#087edc;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
 }
+
+.card h3{
+  font-size:17px;
+  color:#07356a;
+}
+
+.card h4{
+  font-size:14px;
+  color:#0b4e91;
+  margin-top:3px;
+}
+
+.card p{
+  font-size:12px;
+  color:#45617c;
+  line-height:1.6;
+}
+
+/* ================= FEATURES ================= */
 
 .features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
+  margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  background:#dcefff;
+  border-radius:10px;
+  overflow:hidden;
 }
 
 .feature{
-    padding:20px;
-    border-radius:14px;
-    background:rgba(0,130,255,.07);
-    border:1px solid rgba(0,145,255,.15);
+  padding:17px 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  border-right:1px solid #b7d8ed;
 }
 
-.feature b{
-    display:block;
-    color:#38adff;
-    margin-bottom:6px;
+.feature:last-child{
+  border:0;
 }
 
-.feature span{
-    color:#9aafc3;
-    font-size:14px;
+.feature-icon{
+  font-size:30px;
+  color:#062c57;
 }
 
+.feature strong{
+  font-size:14px;
+  display:block;
+}
 
-/* ================= CONTACT ================= */
+.feature small{
+  color:#4a6680;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#031e3d;
+  color:white;
+  padding:35px 4%;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr .7fr;
+  gap:30px;
+  align-items:center;
+}
+
+.about h2{
+  font-size:27px;
+  margin-bottom:15px;
+}
+
+.about h2 span{
+  color:#079cff;
+}
+
+.about p{
+  color:#d5e6f5;
+  line-height:1.7;
+  font-size:14px;
+}
 
 .contact-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+  border:1px solid #0866aa;
+  border-radius:12px;
+  padding:20px;
+  background:#062a51;
 }
 
-.contact-card{
-    padding:30px;
-    border-radius:18px;
-    background:#071525;
-    border:1px solid rgba(0,145,255,.2);
+.contact-box h3{
+  margin-bottom:15px;
+  color:white;
 }
 
-.contact-card h3{
-    margin-bottom:12px;
-    color:#32adff;
+.contact-item{
+  margin:10px 0;
+  display:flex;
+  gap:10px;
+  color:#e5f2ff;
+  font-size:14px;
 }
 
-.contact-card p{
-    color:#a2b5c7;
-    line-height:1.8;
+.contact-item span{
+  color:#0b9dff;
+  font-size:19px;
 }
 
-.phone{
-    font-size:27px;
-    font-weight:bold;
-    color:#fff !important;
-    margin-top:10px;
+.action-box{
+  text-align:center;
 }
 
+.action-box h2{
+  color:white;
+  font-size:24px;
+}
+
+.action-box a{
+  display:inline-block;
+  margin-top:20px;
+  background:#ff1535;
+  padding:15px 25px;
+  color:white;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
 /* ================= FOOTER ================= */
 
 footer{
-    border-top:1px solid rgba(0,145,255,.2);
-    padding:30px 0;
-    text-align:center;
-    color:#71879b;
+  background:#02172e;
+  color:#c5d9eb;
+  text-align:center;
+  padding:22px;
+  font-size:13px;
 }
 
-footer strong{
-    color:#25a8ff;
+.social{
+  margin-top:12px;
 }
 
-
-/* ================= MOBILE = DESKTOP STYLE ================= */
-
-@media(max-width:700px){
-
-    body{
-        overflow-x:auto;
-    }
-
-    .page{
-        min-width:1050px;
-    }
-
-    .nav,
-    .container{
-        width:1100px;
-        max-width:none;
-        min-width:1000px;
-    }
-
-    .hero{
-        padding-top:60px;
-    }
-
-    .hero h1{
-        font-size:50px;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .services{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .about-box,
-    .contact-box{
-        grid-template-columns:1fr 1fr;
-    }
+.social a{
+  display:inline-flex;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background:#087edc;
+  color:white;
+  text-decoration:none;
+  margin:0 4px;
 }
 
+/* ================= FLOATING WHATSAPP ================= */
 
-/* REDUCE MOTION ACCESSIBILITY */
+.whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  z-index:99999;
 
-@media(prefers-reduced-motion:reduce){
+  display:flex;
+  align-items:center;
+  gap:10px;
 
-    .showcase-track,
-    .notice-track{
-        animation:none;
-    }
+  background:#16c866;
+  color:white;
+  text-decoration:none;
 
-    .hero-photo img{
-        transition:none;
-    }
+  padding:10px 17px 10px 10px;
+  border-radius:60px;
+
+  box-shadow:0 6px 20px rgba(0,0,0,.35);
+
+  transition:.3s;
 }
 
+.whatsapp-float:hover{
+  transform:translateY(-3px) scale(1.03);
+}
+
+.wa-logo{
+  width:45px;
+  height:45px;
+  background:#0db957;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+}
+
+.wa-text{
+  line-height:1.3;
+}
+
+.wa-text small{
+  display:block;
+  font-size:10px;
+}
+
+.wa-text strong{
+  font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  header{
+    height:auto;
+    padding:12px 4%;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .logo-area{
+    flex:1;
+  }
+
+  .logo-area img{
+    width:52px;
+    height:52px;
+  }
+
+  .logo-text h1{
+    font-size:22px;
+    line-height:21px;
+  }
+
+  nav{
+    order:3;
+    width:100%;
+    justify-content:center;
+    gap:22px;
+    padding-top:5px;
+  }
+
+  nav a{
+    font-size:13px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:28px 5%;
+  }
+
+  .hero h2{
+    font-size:45px;
+  }
+
+  .hero-image{
+    height:280px;
+  }
+
+  .hero-image img{
+    height:270px;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature{
+    border-bottom:1px solid #b7d8ed;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:550px){
+
+  .language button{
+    padding:8px 11px;
+    font-size:11px;
+  }
+
+  .hero-small{
+    font-size:16px;
+  }
+
+  .hero h2{
+    font-size:37px;
+  }
+
+  .hero-sub{
+    font-size:14px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .call-btn,
+  .wa-btn{
+    justify-content:center;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+
+  .card-img{
+    height:115px;
+  }
+
+  .card-content{
+    padding:9px;
+  }
+
+  .card h3{
+    font-size:13px;
+  }
+
+  .card h4{
+    font-size:11px;
+  }
+
+  .card p{
+    font-size:10px;
+  }
+
+  .card-icon{
+    width:32px;
+    height:32px;
+    font-size:16px;
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature{
+    padding:12px 5px;
+  }
+
+  .feature-icon{
+    font-size:23px;
+  }
+
+  .feature strong{
+    font-size:11px;
+  }
+
+  .feature small{
+    font-size:9px;
+  }
+
+  .whatsapp-float{
+    right:10px;
+    bottom:13px;
+    padding:8px 13px 8px 8px;
+  }
+
+  .wa-logo{
+    width:42px;
+    height:42px;
+  }
+
+  .wa-text strong{
+    font-size:11px;
+  }
+}
 </style>
 </head>
 
-
 <body>
-
-<div class="page">
-
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="nav">
+  <div class="logo-area">
 
-<div class="logo-area">
+    <img src="logo.png" alt="Tanjim Refrigeration Logo">
 
-<img src="logo.png" class="logo" alt="TANJIM REFRIGERATION">
+    <div class="logo-text">
+      <h1>TANJIM <span>REFRIGERATION</span></h1>
+      <p>TRUSTED REPAIR SERVICE</p>
+    </div>
 
-<div class="brand">
-TANJIM REFRIGERATION
-<small>AC • FRIDGE • HOME APPLIANCE</small>
-</div>
+  </div>
 
-</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-
-<div class="language">
-
-<button class="lang-btn active" id="bnBtn" onclick="setLang('bn')">
-বাংলা
-</button>
-
-<button class="lang-btn" id="enBtn" onclick="setLang('en')">
-English
-</button>
-
-</div>
-
-</div>
+  <div class="language">
+    <button class="active" onclick="setBangla()">বাংলা</button>
+    <button onclick="setEnglish()">English</button>
+  </div>
 
 </header>
 
 
-
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-<div class="container">
+  <div class="hero-left">
 
-<div class="hero-grid">
+    <div class="hero-small bn">
+      আপনার এসি, ফ্রিজ ও সকল<br>
+      ইলেকট্রনিক যন্ত্রপাতির নির্ভরযোগ্য<br>
+      মেরামত সেবা
+    </div>
 
+    <div class="hero-small en" style="display:none;">
+      Reliable Repair Service for Your AC,<br>
+      Refrigerator & All Electronic Appliances
+    </div>
 
-<div>
+    <h2>
+      TANJIM<br>
+      <span>REFRIGERATION</span>
+    </h2>
 
-<div class="badge">
+    <div class="hero-sub">
+      AC • FRIDGE • FAN • MOTOR • HOME APPLIANCE REPAIR
+    </div>
 
-<span class="bn">বিশ্বস্ত টেকনিশিয়ান সার্ভিস</span>
-<span class="en" hidden>TRUSTED TECHNICIAN SERVICE</span>
+    <div class="hero-points">
 
-</div>
+      <div class="point">
+        <span class="point-icon">✓</span>
+        Experienced<br>Technician
+      </div>
 
+      <div class="point">
+        <span class="point-icon">⚡</span>
+        Quick<br>Service
+      </div>
 
-<h1>
+      <div class="point">
+        <span class="point-icon">◉</span>
+        Affordable<br>Price
+      </div>
 
-<span class="bn">
-AC, ফ্রিজ ও<br>
-হোম অ্যাপ্লায়েন্স<br>
-<span>রিপেয়ার সার্ভিস</span>
-</span>
+      <div class="point">
+        <span class="point-icon">☺</span>
+        Customer<br>Satisfaction
+      </div>
 
-<span class="en" hidden>
-AC, Fridge &<br>
-Home Appliance<br>
-<span>Repair Service</span>
-</span>
+    </div>
 
-</h1>
+    <div class="hero-buttons">
 
+      <a class="call-btn" href="tel:01737995760">
+        ☎ &nbsp; কল করুন&nbsp; 01737995760
+      </a>
 
-<p>
+      <a class="wa-btn" href="https://wa.me/8801737995760" target="_blank">
+        ◉ &nbsp; WhatsApp Message করুন
+      </a>
 
-<span class="bn">
-আপনার AC, ফ্রিজ, ফ্যান, মোটর ও বিভিন্ন ইলেকট্রনিক/হোম অ্যাপ্লায়েন্সের নির্ভরযোগ্য মেরামত ও সার্ভিস।
-</span>
+    </div>
 
-<span class="en" hidden>
-Reliable repair and servicing for AC, refrigerator, fan, motor and various electronic and home appliances.
-</span>
-
-</p>
-
-
-<div class="hero-buttons">
-
-<a href="tel:01737995760" class="btn btn-primary">
-
-<span class="bn">📞 কল করুন</span>
-<span class="en" hidden>📞 Call Now</span>
-
-</a>
-
-
-<a href="#services" class="btn btn-outline">
-
-<span class="bn">সার্ভিস দেখুন</span>
-<span class="en" hidden>View Services</span>
-
-</a>
-
-</div>
-
-</div>
+  </div>
 
 
+  <div class="hero-image">
 
-<!-- HERO IMAGE -->
+    <img
+      src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+      alt="AC Repair Technician">
 
-<div class="hero-photo">
-
-<img src="images/ac-repair.jpg" class="heroImg active" alt="AC Repair">
-
-<img src="images/fridge-repair.jpg" class="heroImg" alt="Fridge Repair">
-
-<img src="images/fan-repair.jpg" class="heroImg" alt="Fan Repair">
-
-<img src="images/motor-repair.jpg" class="heroImg" alt="Motor Repair">
-
-<img src="images/rice-cooker.jpg" class="heroImg" alt="Rice Cooker Repair">
-
-<img src="images/blender-repair.jpg" class="heroImg" alt="Blender Repair">
-
-<img src="images/weight-scale.jpg" class="heroImg" alt="Weight Scale Repair">
-
-<img src="images/other-appliances.jpg" class="heroImg" alt="Other Appliance Repair">
-
-
-<div class="photo-overlay"></div>
-
-
-<div class="hero-photo-title">
-
-<span>
-
-<span class="bn">আমাদের কাজ</span>
-<span class="en" hidden>OUR WORK</span>
-
-</span>
-
-
-<h3 id="heroTitle">
-
-<span class="bn">AC Repair</span>
-<span class="en" hidden>AC Repair</span>
-
-</h3>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
-
-
-<!-- ================= NOTICE ================= -->
-
-<div class="notice">
-
-<div class="notice-track">
-
-<div class="notice-item">
-<strong>⚡</strong>
-<span class="bn">AC • ফ্রিজ • ফ্যান • মোটর • হোম অ্যাপ্লায়েন্স</span>
-<span class="en" hidden>AC • Fridge • Fan • Motor • Home Appliances</span>
-</div>
-
-<div class="notice-item">
-<strong>✓</strong>
-<span class="bn">প্রফেশনাল সার্ভিস</span>
-<span class="en" hidden>Professional Service</span>
-</div>
-
-<div class="notice-item">
-<strong>✓</strong>
-<span class="bn">দক্ষ টেকনিশিয়ান</span>
-<span class="en" hidden>Skilled Technician</span>
-</div>
-
-<div class="notice-item">
-<strong>📞</strong>
-01737995760
-</div>
-
-
-<div class="notice-item">
-<strong>⚡</strong>
-<span class="bn">AC • ফ্রিজ • ফ্যান • মোটর • হোম অ্যাপ্লায়েন্স</span>
-<span class="en" hidden>AC • Fridge • Fan • Motor • Home Appliances</span>
-</div>
-
-<div class="notice-item">
-<strong>✓</strong>
-<span class="bn">প্রফেশনাল সার্ভিস</span>
-<span class="en" hidden>Professional Service</span>
-</div>
-
-<div class="notice-item">
-<strong>✓</strong>
-<span class="bn">দক্ষ টেকনিশিয়ান</span>
-<span class="en" hidden>Skilled Technician</span>
-</div>
-
-<div class="notice-item">
-<strong>📞</strong>
-01737995760
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ================= WORK SHOWCASE ================= -->
-
-<section class="showcase">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-
-<span class="bn">আমাদের কাজের ঝলক</span>
-<span class="en" hidden>OUR WORK SHOWCASE</span>
-
-</h2>
-
-<p>
-
-<span class="bn">
-আমাদের বিভিন্ন কাজের ছবি একটার পর একটা দেখুন
-</span>
-
-<span class="en" hidden>
-See our different repair and service works
-</span>
-
-</p>
-
-</div>
-
-
-<div class="showcase-box">
-
-<div class="showcase-track">
-
-
-<!-- FIRST GROUP -->
-
-<div class="showcase-group">
-
-<div class="showcase-card">
-<img src="images/ac-repair.jpg" alt="AC Repair">
-<div class="showcase-label">
-<span class="bn">এসি মেরামত</span>
-<span class="en" hidden>AC Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/fridge-repair.jpg" alt="Fridge Repair">
-<div class="showcase-label">
-<span class="bn">ফ্রিজ মেরামত</span>
-<span class="en" hidden>Fridge Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/fan-repair.jpg" alt="Fan Repair">
-<div class="showcase-label">
-<span class="bn">ফ্যান মেরামত</span>
-<span class="en" hidden>Fan Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/motor-repair.jpg" alt="Motor Repair">
-<div class="showcase-label">
-<span class="bn">মোটর মেরামত</span>
-<span class="en" hidden>Motor Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/rice-cooker.jpg" alt="Rice Cooker">
-<div class="showcase-label">
-<span class="bn">রাইস কুকার</span>
-<span class="en" hidden>Rice Cooker</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/blender-repair.jpg" alt="Blender">
-<div class="showcase-label">
-<span class="bn">ব্লেন্ডার / মিক্সার</span>
-<span class="en" hidden>Blender / Mixer</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/weight-scale.jpg" alt="Weight Scale">
-<div class="showcase-label">
-<span class="bn">ওজন মাপার মেশিন</span>
-<span class="en" hidden>Weight Scale</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/other-appliances.jpg" alt="Other Appliances">
-<div class="showcase-label">
-<span class="bn">অন্যান্য অ্যাপ্লায়েন্স</span>
-<span class="en" hidden>Other Appliances</span>
-</div>
-</div>
-
-</div>
-
-
-
-<!-- SECOND GROUP FOR SEAMLESS LOOP -->
-
-<div class="showcase-group">
-
-<div class="showcase-card">
-<img src="images/ac-repair.jpg" alt="AC Repair">
-<div class="showcase-label">
-<span class="bn">এসি মেরামত</span>
-<span class="en" hidden>AC Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/fridge-repair.jpg" alt="Fridge Repair">
-<div class="showcase-label">
-<span class="bn">ফ্রিজ মেরামত</span>
-<span class="en" hidden>Fridge Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/fan-repair.jpg" alt="Fan Repair">
-<div class="showcase-label">
-<span class="bn">ফ্যান মেরামত</span>
-<span class="en" hidden>Fan Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/motor-repair.jpg" alt="Motor Repair">
-<div class="showcase-label">
-<span class="bn">মোটর মেরামত</span>
-<span class="en" hidden>Motor Repair</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/rice-cooker.jpg" alt="Rice Cooker">
-<div class="showcase-label">
-<span class="bn">রাইস কুকার</span>
-<span class="en" hidden>Rice Cooker</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/blender-repair.jpg" alt="Blender">
-<div class="showcase-label">
-<span class="bn">ব্লেন্ডার / মিক্সার</span>
-<span class="en" hidden>Blender / Mixer</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/weight-scale.jpg" alt="Weight Scale">
-<div class="showcase-label">
-<span class="bn">ওজন মাপার মেশিন</span>
-<span class="en" hidden>Weight Scale</span>
-</div>
-</div>
-
-
-<div class="showcase-card">
-<img src="images/other-appliances.jpg" alt="Other Appliances">
-<div class="showcase-label">
-<span class="bn">অন্যান্য অ্যাপ্লায়েন্স</span>
-<span class="en" hidden>Other Appliances</span>
-</div>
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section" id="services">
+<section class="section services" id="services">
 
-<div class="container">
+  <div class="section-title">
 
-<div class="section-title">
+    <h2>🔧 আমাদের <span>সেবাসমূহ</span></h2>
 
-<h2>
+    <p>Our Repair Services</p>
 
-<span class="bn">আমাদের সার্ভিস</span>
-<span class="en" hidden>OUR SERVICES</span>
+  </div>
 
-</h2>
 
-<p>
+  <div class="service-grid">
 
-<span class="bn">
-বিভিন্ন ধরনের ইলেকট্রনিক ও হোম অ্যাপ্লায়েন্স মেরামত
-</span>
 
-<span class="en" hidden>
-Professional repair for different electronic and home appliances
-</span>
+    <!-- AC -->
 
-</p>
+    <div class="card">
 
-</div>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1631545806609-9d3e9f6b9c3b?auto=format&fit=crop&w=700&q=80">
+      </div>
 
+      <div class="card-content">
 
-<div class="services">
+        <div class="card-title">
+          <div class="card-icon">❄</div>
+          <div>
+            <h3>এসি মেরামত</h3>
+            <h4>AC Repair</h4>
+          </div>
+        </div>
 
+        <p>
+          সার্ভিসিং, ইনস্টলেশন, গ্যাস রিফিল
+          <br>Servicing, Installation, Gas Refill
+        </p>
 
-<!-- 1 -->
+      </div>
+    </div>
 
-<div class="service-card">
 
-<img src="images/ac-repair.jpg" alt="AC Repair">
+    <!-- FRIDGE -->
 
-<div class="service-content">
+    <div class="card">
 
-<h3>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-<span class="bn">এসি মেরামত</span>
-<span class="en" hidden>AC Repair</span>
+      <div class="card-content">
 
-</h3>
+        <div class="card-title">
+          <div class="card-icon">▣</div>
+          <div>
+            <h3>ফ্রিজ মেরামত</h3>
+            <h4>Fridge Repair</h4>
+          </div>
+        </div>
 
-<p>
+        <p>
+          কুলিং, কম্প্রেসার, গ্যাস সমস্যা
+          <br>Cooling & Compressor Repair
+        </p>
 
-<span class="bn">
-এসি সার্ভিসিং, গ্যাস, কম্প্রেসর ও বিভিন্ন সমস্যা সমাধান।
-</span>
+      </div>
+    </div>
 
-<span class="en" hidden>
-AC servicing, gas charging, compressor and other repairs.
-</span>
 
-</p>
+    <!-- FAN -->
 
-</div>
+    <div class="card">
 
-</div>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=700&q=80">
+      </div>
 
+      <div class="card-content">
 
-<!-- 2 -->
+        <div class="card-title">
+          <div class="card-icon">✤</div>
+          <div>
+            <h3>ফ্যান মেরামত</h3>
+            <h4>Fan Repair</h4>
+          </div>
+        </div>
 
-<div class="service-card">
+        <p>
+          মোটর ও ইলেকট্রিক্যাল রিপেয়ার
+          <br>Motor & Electrical Repair
+        </p>
 
-<img src="images/fridge-repair.jpg" alt="Fridge Repair">
+      </div>
+    </div>
 
-<div class="service-content">
 
-<h3>
+    <!-- MOTOR -->
 
-<span class="bn">ফ্রিজ মেরামত</span>
-<span class="en" hidden>Fridge Repair</span>
+    <div class="card">
 
-</h3>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-<p>
+      <div class="card-content">
 
-<span class="bn">
-ফ্রিজের গ্যাস, কম্প্রেসর, কুলিং ও লিকেজ সমস্যা।
-</span>
+        <div class="card-title">
+          <div class="card-icon">⚙</div>
+          <div>
+            <h3>মোটর মেরামত</h3>
+            <h4>Motor Repair</h4>
+          </div>
+        </div>
 
-<span class="en" hidden>
-Fridge gas, compressor, cooling and leakage problems.
-</span>
+        <p>
+          সকল ধরনের মোটর সার্ভিসিং
+          <br>All Type Motor Repair
+        </p>
 
-</p>
+      </div>
+    </div>
 
-</div>
 
-</div>
+    <!-- RICE COOKER -->
 
+    <div class="card">
 
-<!-- 3 -->
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-<div class="service-card">
+      <div class="card-content">
 
-<img src="images/fan-repair.jpg" alt="Fan Repair">
+        <div class="card-title">
+          <div class="card-icon">▰</div>
+          <div>
+            <h3>রাইস কুকার মেরামত</h3>
+            <h4>Rice Cooker Repair</h4>
+          </div>
+        </div>
 
-<div class="service-content">
+        <p>
+          হিটিং, থার্মোস্ট্যাট, ইলেকট্রিক্যাল সমস্যা
+          <br>Heating & Electrical Repair
+        </p>
 
-<h3>
+      </div>
+    </div>
 
-<span class="bn">ফ্যান মেরামত</span>
-<span class="en" hidden>Fan Repair</span>
 
-</h3>
+    <!-- BLENDER -->
 
-<p>
+    <div class="card">
 
-<span class="bn">
-সিলিং, টেবিল ও বিভিন্ন ধরনের ফ্যান মেরামত।
-</span>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-<span class="en" hidden>
-Repair of ceiling, table and different types of fans.
-</span>
+      <div class="card-content">
 
-</p>
+        <div class="card-title">
+          <div class="card-icon">♜</div>
+          <div>
+            <h3>ব্লেন্ডার / মিক্সার</h3>
+            <h4>Blender / Mixer Repair</h4>
+          </div>
+        </div>
 
-</div>
+        <p>
+          মোটর, সুইচ, ইলেকট্রিক্যাল রিপেয়ার
+          <br>Motor, Switch & Electrical Repair
+        </p>
 
-</div>
+      </div>
+    </div>
 
 
-<!-- 4 -->
+    <!-- WEIGHT SCALE -->
 
-<div class="service-card">
+    <div class="card">
 
-<img src="images/motor-repair.jpg" alt="Motor Repair">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-<div class="service-content">
+      <div class="card-content">
 
-<h3>
+        <div class="card-title">
+          <div class="card-icon">⚖</div>
+          <div>
+            <h3>ওজন মেশিন মেরামত</h3>
+            <h4>Weight Scale Repair</h4>
+          </div>
+        </div>
 
-<span class="bn">মোটর মেরামত</span>
-<span class="en" hidden>Motor Repair</span>
+        <p>
+          ডিজিটাল ও এনালগ স্কেল
+          <br>Digital & Analog Scale Repair
+        </p>
 
-</h3>
+      </div>
+    </div>
 
-<p>
 
-<span class="bn">
-বিভিন্ন ধরনের মোটর চেকিং, সার্ভিসিং ও মেরামত।
-</span>
+    <!-- OTHER -->
 
-<span class="en" hidden>
-Motor checking, servicing and repair.
-</span>
+    <div class="card">
 
-</p>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=80">
+      </div>
 
-</div>
+      <div class="card-content">
 
-</div>
+        <div class="card-title">
+          <div class="card-icon">🔧</div>
+          <div>
+            <h3>অন্যান্য যন্ত্রপাতি</h3>
+            <h4>Other Appliances</h4>
+          </div>
+        </div>
 
+        <p>
+          মাইক্রোওভেন, ওয়াটার হিটার ইত্যাদি
+          <br>Microwave, Water Heater etc.
+        </p>
 
-<!-- 5 -->
+      </div>
+    </div>
 
-<div class="service-card">
 
-<img src="images/rice-cooker.jpg" alt="Rice Cooker">
+  </div>
 
-<div class="service-content">
 
-<h3>
+  <!-- FEATURES -->
 
-<span class="bn">রাইস কুকার</span>
-<span class="en" hidden>Rice Cooker</span>
+  <div class="features">
 
-</h3>
+    <div class="feature">
+      <div class="feature-icon">👤</div>
+      <div>
+        <strong>দক্ষ টেকনিশিয়ান</strong>
+        <small>Skilled Technician</small>
+      </div>
+    </div>
 
-<p>
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div>
+        <strong>দ্রুত সেবা</strong>
+        <small>Quick Service</small>
+      </div>
+    </div>
 
-<span class="bn">
-রাইস কুকারের বিভিন্ন ইলেকট্রিক সমস্যা সমাধান।
-</span>
+    <div class="feature">
+      <div class="feature-icon">⌂</div>
+      <div>
+        <strong>বাসায় গিয়ে সার্ভিস</strong>
+        <small>Home Service</small>
+      </div>
+    </div>
 
-<span class="en" hidden>
-Repair of different electrical problems in rice cookers.
-</span>
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <div>
+        <strong>যথাযথ মানের যন্ত্রাংশ</strong>
+        <small>Genuine Parts</small>
+      </div>
+    </div>
 
-</p>
+    <div class="feature">
+      <div class="feature-icon">◉</div>
+      <div>
+        <strong>সাশ্রয়ী মূল্য</strong>
+        <small>Affordable Price</small>
+      </div>
+    </div>
 
-</div>
-
-</div>
-
-
-<!-- 6 -->
-
-<div class="service-card">
-
-<img src="images/blender-repair.jpg" alt="Blender">
-
-<div class="service-content">
-
-<h3>
-
-<span class="bn">ব্লেন্ডার / মিক্সার</span>
-<span class="en" hidden>Blender / Mixer</span>
-
-</h3>
-
-<p>
-
-<span class="bn">
-ব্লেন্ডার, মিক্সার ও মোটর সংক্রান্ত মেরামত।
-</span>
-
-<span class="en" hidden>
-Blender, mixer and motor-related repairs.
-</span>
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 7 -->
-
-<div class="service-card">
-
-<img src="images/weight-scale.jpg" alt="Weight Scale">
-
-<div class="service-content">
-
-<h3>
-
-<span class="bn">ওজন মাপার মেশিন</span>
-<span class="en" hidden>Weight Scale</span>
-
-</h3>
-
-<p>
-
-<span class="bn">
-ডিজিটাল ওজন মাপার মেশিনের বিভিন্ন সমস্যা সমাধান।
-</span>
-
-<span class="en" hidden>
-Repair of digital weight scales and related problems.
-</span>
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 8 -->
-
-<div class="service-card">
-
-<img src="images/other-appliances.jpg" alt="Other Appliances">
-
-<div class="service-content">
-
-<h3>
-
-<span class="bn">অন্যান্য অ্যাপ্লায়েন্স</span>
-<span class="en" hidden>Other Appliances</span>
-
-</h3>
-
-<p>
-
-<span class="bn">
-বিভিন্ন ধরনের ইলেকট্রনিক ও হোম অ্যাপ্লায়েন্স মেরামত।
-</span>
-
-<span class="en" hidden>
-Repair of various electronic and home appliances.
-</span>
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 
 <!-- ================= ABOUT ================= -->
 
-<section class="section">
+<section class="about" id="about">
 
-<div class="container">
-
-<div class="about-box">
+  <div class="about-grid">
 
 
-<div>
+    <div>
 
-<h2>
+      <h2>🔧 আমাদের <span>সম্পর্কে</span></h2>
 
-<span class="bn">TANJIM REFRIGERATION</span>
-<span class="en" hidden>ABOUT TANJIM REFRIGERATION</span>
+      <p>
+        Tanjim Refrigeration দীর্ঘদিন ধরে এসি, ফ্রিজ,
+        ফ্যান, মোটর এবং বিভিন্ন ইলেকট্রনিক যন্ত্রপাতি
+        মেরামতে নির্ভরযোগ্য সেবা দিয়ে আসছে।
+        আমাদের লক্ষ্য — দ্রুত, পেশাদার এবং সাশ্রয়ী মূল্যে
+        সেবা প্রদান।
+      </p>
 
-</h2>
+      <br>
 
+      <p>
+        Tanjim Refrigeration has been providing reliable
+        repair services for AC, fridge, fan, motor and
+        various home appliances for many years.
+      </p>
 
-<p>
-
-<span class="bn">
-মোহাম্মদ দেলোয়ার হোসেন একজন অভিজ্ঞ AC, Fridge & Home Appliance Technician। AC, ফ্রিজ ও বিভিন্ন ইলেকট্রনিক এবং হোম অ্যাপ্লায়েন্সের মেরামত ও সার্ভিসিং করা হয়।
-</span>
-
-<span class="en" hidden>
-Mohammad Delowar Hussain is an AC, Fridge & Home Appliance Technician providing reliable repair and servicing for ACs, refrigerators, electronics and home appliances.
-</span>
-
-</p>
-
-</div>
+    </div>
 
 
+    <div class="contact-box" id="contact">
 
-<div class="features">
+      <h3>যোগাযোগ করুন / Contact Us</h3>
 
+      <div class="contact-item">
+        <span>👤</span>
+        Mohammad Delowar Hussain
+      </div>
 
-<div class="feature">
+      <div class="contact-item">
+        <span>☎</span>
+        <a href="tel:01737995760" style="color:white;text-decoration:none;">
+          01737995760
+        </a>
+      </div>
 
-<b>✓ <span class="bn">দক্ষ টেকনিশিয়ান</span>
-<span class="en" hidden>Skilled Technician</span></b>
+      <div class="contact-item">
+        <span>⌖</span>
+        Time Bazar, Banshkhali,<br>
+        Chittagong
+      </div>
 
-<span class="bn">অভিজ্ঞতার সাথে কাজ</span>
-<span class="en" hidden>Experienced service</span>
+      <div class="contact-item">
+        <span>✓</span>
+        সবার জন্য, সবসময়
+      </div>
 
-</div>
-
-
-<div class="feature">
-
-<b>✓ <span class="bn">প্রফেশনাল সার্ভিস</span>
-<span class="en" hidden>Professional Service</span></b>
-
-<span class="bn">যত্নসহকারে কাজ</span>
-<span class="en" hidden>Careful workmanship</span>
-
-</div>
-
-
-<div class="feature">
-
-<b>✓ <span class="bn">বিভিন্ন সার্ভিস</span>
-<span class="en" hidden>Multiple Services</span></b>
-
-<span class="bn">এক জায়গায় বিভিন্ন কাজ</span>
-<span class="en" hidden>Many services in one place</span>
-
-</div>
+    </div>
 
 
-<div class="feature">
+    <div class="action-box">
 
-<b>✓ <span class="bn">বিশ্বস্ততা</span>
-<span class="en" hidden>Reliability</span></b>
+      <h2>
+        আজই সার্ভিস নিন<br>
+        ঝামেলামুক্ত থাকুন
+      </h2>
 
-<span class="bn">গ্রাহকের সন্তুষ্টি</span>
-<span class="en" hidden>Customer satisfaction</span>
+      <a href="tel:01737995760">
+        ☎ কল করুন এখনই<br>
+        01737995760
+      </a>
 
-</div>
+    </div>
 
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-
-<span class="bn">যোগাযোগ করুন</span>
-<span class="en" hidden>CONTACT US</span>
-
-</h2>
-
-<p>
-
-<span class="bn">সার্ভিসের জন্য সরাসরি যোগাযোগ করুন</span>
-
-<span class="en" hidden>
-Contact us directly for service
-</span>
-
-</p>
-
-</div>
-
-
-<div class="contact-box">
-
-
-<div class="contact-card">
-
-<h3>📞
-
-<span class="bn">ফোন</span>
-<span class="en" hidden>Phone</span>
-
-</h3>
-
-<p class="phone">
-01737995760
-</p>
-
-<br>
-
-<a href="tel:01737995760" class="btn btn-primary">
-
-<span class="bn">এখনই কল করুন</span>
-<span class="en" hidden>Call Now</span>
-
-</a>
-
-</div>
-
-
-
-<div class="contact-card">
-
-<h3>📍
-
-<span class="bn">ঠিকানা</span>
-<span class="en" hidden>Address</span>
-
-</h3>
-
-<p>
-
-<span class="bn">
-Taime Bazar,<br>
-Banshkhali, Chittagong, Bangladesh
-</span>
-
-<span class="en" hidden>
-Taime Bazar,<br>
-Banshkhali, Chittagong, Bangladesh
-</span>
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
 
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
+  © 2025 TANJIM REFRIGERATION. All Rights Reserved.
 
-<p>
+  <div class="social">
 
-© 2026 <strong>TANJIM REFRIGERATION</strong>
+    <a href="#">f</a>
+    <a href="#">▶</a>
+    <a href="https://wa.me/8801737995760" target="_blank">◉</a>
 
-<br><br>
-
-<span class="bn">
-AC • Fridge • Fan • Motor • Home Appliance Repair
-</span>
-
-<span class="en" hidden>
-AC • Fridge • Fan • Motor • Home Appliance Repair
-</span>
-
-</p>
-
-</div>
+  </div>
 
 </footer>
 
 
-</div>
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a href="https://wa.me/8801737995760"
+   target="_blank"
+   class="whatsapp-float">
+
+  <div class="wa-logo">
+    ◉
+  </div>
+
+  <div class="wa-text">
+    <small>সরাসরি যোগাযোগ করুন</small>
+    <strong>
+      হোয়াটসঅ্যাপে যোগাযোগ করতে<br>
+      এখানেই ক্লিক করুন
+    </strong>
+  </div>
+
+</a>
 
 
-
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= LANGUAGE SCRIPT ================= -->
 
 <script>
 
-/* ================= LANGUAGE SWITCH ================= */
+function setBangla(){
 
-function setLang(lang){
+  document.querySelectorAll('.bn').forEach(el=>{
+    el.style.display='block';
+  });
 
-    const bnElements = document.querySelectorAll(".bn");
-    const enElements = document.querySelectorAll(".en");
+  document.querySelectorAll('.en').forEach(el=>{
+    el.style.display='none';
+  });
 
-    if(lang === "bn"){
+  document.querySelectorAll('.language button')[0]
+    .classList.add('active');
 
-        bnElements.forEach(el => {
-            el.hidden = false;
-        });
-
-        enElements.forEach(el => {
-            el.hidden = true;
-        });
-
-        document.getElementById("bnBtn").classList.add("active");
-        document.getElementById("enBtn").classList.remove("active");
-
-        document.documentElement.lang = "bn";
-
-    }else{
-
-        bnElements.forEach(el => {
-            el.hidden = true;
-        });
-
-        enElements.forEach(el => {
-            el.hidden = false;
-        });
-
-        document.getElementById("enBtn").classList.add("active");
-        document.getElementById("bnBtn").classList.remove("active");
-
-        document.documentElement.lang = "en";
-    }
+  document.querySelectorAll('.language button')[1]
+    .classList.remove('active');
 }
 
 
-/* ================= HERO IMAGE SLIDER ================= */
+function setEnglish(){
 
-const heroImages = document.querySelectorAll(".heroImg");
+  document.querySelectorAll('.bn').forEach(el=>{
+    el.style.display='none';
+  });
 
-const heroNamesBn = [
-    "AC Repair",
-    "Fridge Repair",
-    "Fan Repair",
-    "Motor Repair",
-    "Rice Cooker",
-    "Blender / Mixer",
-    "Weight Scale",
-    "Other Appliances"
-];
+  document.querySelectorAll('.en').forEach(el=>{
+    el.style.display='block';
+  });
 
-const heroNamesEn = [
-    "AC Repair",
-    "Fridge Repair",
-    "Fan Repair",
-    "Motor Repair",
-    "Rice Cooker",
-    "Blender / Mixer",
-    "Weight Scale",
-    "Other Appliances"
-];
+  document.querySelectorAll('.language button')[1]
+    .classList.add('active');
 
-let heroIndex = 0;
-
-function changeHeroImage(){
-
-    heroImages.forEach(img => {
-        img.classList.remove("active");
-    });
-
-    heroImages[heroIndex].classList.add("active");
-
-    const title = document.getElementById("heroTitle");
-
-    title.innerHTML = `
-        <span class="bn">${heroNamesBn[heroIndex]}</span>
-        <span class="en" hidden>${heroNamesEn[heroIndex]}</span>
-    `;
-
-    /* Keep currently selected language */
-    const currentLang = document.documentElement.lang;
-
-    if(currentLang === "en"){
-        title.querySelector(".bn").hidden = true;
-        title.querySelector(".en").hidden = false;
-    }
-
-    heroIndex++;
-
-    if(heroIndex >= heroImages.length){
-        heroIndex = 0;
-    }
+  document.querySelectorAll('.language button')[0]
+    .classList.remove('active');
 }
-
-
-/* Change every 3 seconds */
-
-setInterval(changeHeroImage,3000);
-
-
-/* ================= DEFAULT LANGUAGE ================= */
-
-setLang("bn");
 
 </script>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/8801737995760"
-   target="_blank"
-   class="whatsapp-float"
-   aria-label="WhatsApp-এ যোগাযোগ করুন">
 
-  <svg viewBox="0 0 32 32" class="whatsapp-icon">
-    <path fill="#fff"
-      d="M19.11 17.41c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.33-1.56-1.49-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-    <path fill="#fff"
-      d="M16.02 3C8.84 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.48L3.05 29l6.67-1.65A12.94 12.94 0 0 0 16.02 29C23.19 29 29 23.17 29 16S23.19 3 16.02 3zm0 23.68c-2.04 0-4.04-.55-5.78-1.59l-.41-.24-3.96.98 1.06-3.86-.27-.4A10.74 10.74 0 1 1 16.02 26.68z"/>
-  </svg>
-
-  <span>হোয়াটসঅ্যাপে যোগাযোগ করতে এখানেই ক্লিক করুন</span>
-</a>
-
-<style>
-.whatsapp-float{
-  position:fixed;
-  right:25;
-  bottom:30px;
-  z-index:999999;
-
-  display:flex;
-  align-items:center;
-  gap:15px;
-
-  padding:10px 17px 10px 12px;
-  border-radius:70px;
-
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-
-  font-size:24px;
-  font-weight:1300;
-
-  box-shadow:0 9px 30px rgba(0,0,0,.35);
-
-  transition:.35s ease;
-}
-
-.whatsapp-icon{
-  width:68px;
-  height:68px;
-  flex-shrink:0;
-}
-
-.whatsapp-float:hover{
-  transform:scale(1.04);
-}
-
-/* Mobile */
-@media(max-width:600px){
-  .whatsapp-float{
-    right:12px;
-    bottom:15px;
-    padding:9px 14px 9px 10px;
-    font-size:12px;
-  }
-
-  .whatsapp-icon{
-    width:36px;
-    height:36px;
-  }
-}
-</style>
 </body>
     </html>
