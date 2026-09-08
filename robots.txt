@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mddelowarhossain600-source.github.io/TANJIM.REFRIGERATION/sitemap.xml
