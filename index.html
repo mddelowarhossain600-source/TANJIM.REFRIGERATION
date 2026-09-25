@@ -87,9 +87,17 @@ html{
 
 body{
     font-family:Arial,"Noto Sans Bengali",sans-serif;
-    background:#f4f8fc;
+
+    /* DESKTOP BACKGROUND */
+    background-image:url("desktop-bg.jpg");
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
     color:#172033;
     line-height:1.6;
+    min-height:100vh;
 }
 
 img,
@@ -111,7 +119,9 @@ header{
     position:sticky;
     top:0;
     z-index:999;
-    background:#062b52;
+
+    background:rgba(6,43,82,.96);
+
     color:white;
     box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
@@ -175,7 +185,13 @@ nav a{
 ========================= */
 
 .hero{
-    background:linear-gradient(135deg,#e9f5ff,#fff);
+    /*
+       Background image comes from BODY.
+       Hero itself is transparent so the
+       desktop/mobile background remains visible.
+    */
+
+    background:rgba(255,255,255,.18);
 }
 
 .hero-inner{
@@ -193,12 +209,16 @@ nav a{
     line-height:1.15;
     color:#062b52;
     margin-bottom:18px;
+
+    text-shadow:0 1px 2px rgba(255,255,255,.7);
 }
 
 .hero p{
     font-size:18px;
     color:#596579;
     margin-bottom:22px;
+
+    text-shadow:0 1px 2px rgba(255,255,255,.7);
 }
 
 .buttons{
@@ -239,7 +259,7 @@ nav a{
 }
 
 .card{
-    background:white;
+    background:rgba(255,255,255,.96);
     border-radius:17px;
     overflow:hidden;
     box-shadow:0 7px 25px rgba(0,0,0,.09);
@@ -329,7 +349,11 @@ nav a{
 
 .voice{
     padding:20px;
-    background:linear-gradient(135deg,#062b52,#087fdf);
+    background:linear-gradient(
+        135deg,
+        rgba(6,43,82,.97),
+        rgba(8,127,223,.97)
+    );
     color:white;
 }
 
@@ -432,12 +456,16 @@ section{
     font-size:34px;
     color:#062b52;
     margin-bottom:10px;
+
+    text-shadow:0 1px 2px rgba(255,255,255,.8);
 }
 
 .subtitle{
     text-align:center;
     color:#687386;
     margin-bottom:35px;
+
+    text-shadow:0 1px 2px rgba(255,255,255,.8);
 }
 
 
@@ -452,7 +480,7 @@ section{
 }
 
 .service{
-    background:white;
+    background:rgba(255,255,255,.96);
     border-radius:14px;
     overflow:hidden;
     box-shadow:0 5px 18px rgba(0,0,0,.07);
@@ -485,7 +513,7 @@ section{
 ========================= */
 
 .features{
-    background:#062b52;
+    background:rgba(6,43,82,.94);
     max-width:none;
     color:white;
 }
@@ -498,6 +526,7 @@ section{
 
 .features .title{
     color:white;
+    text-shadow:none;
 }
 
 .feature-grid{
@@ -528,7 +557,7 @@ section{
 .about-box{
     max-width:850px;
     margin:auto;
-    background:white;
+    background:rgba(255,255,255,.96);
     padding:30px;
     border-radius:18px;
     box-shadow:0 7px 25px rgba(0,0,0,.07);
@@ -541,7 +570,7 @@ section{
 ========================= */
 
 .contact{
-    background:#eef6ff;
+    background:rgba(238,246,255,.94);
     max-width:none;
 }
 
@@ -559,7 +588,7 @@ section{
 }
 
 .contact-item{
-    background:white;
+    background:rgba(255,255,255,.97);
     padding:15px;
     border-radius:10px;
     border:1px solid #dce8f5;
@@ -599,7 +628,11 @@ section{
 ========================= */
 
 .cta{
-    background:linear-gradient(135deg,#087fdf,#062b52);
+    background:linear-gradient(
+        135deg,
+        rgba(8,127,223,.96),
+        rgba(6,43,82,.96)
+    );
     color:white;
     max-width:none;
     text-align:center;
@@ -622,7 +655,7 @@ section{
 ========================= */
 
 footer{
-    background:#031a32;
+    background:rgba(3,26,50,.97);
     color:#cbd7e5;
     text-align:center;
     padding:25px 15px;
@@ -703,6 +736,24 @@ footer{
 
 
 @media(max-width:600px){
+
+    body{
+
+        /* MOBILE BACKGROUND */
+        background-image:url("mobile-bg.jpg");
+
+        background-position:center top;
+        background-size:cover;
+        background-repeat:no-repeat;
+
+        /*
+           Keep background fixed while page scrolls.
+           If a particular mobile browser does not support
+           fixed background, it will automatically behave
+           normally.
+        */
+        background-attachment:fixed;
+    }
 
     .nav{
         flex-direction:column;
@@ -1075,11 +1126,6 @@ data-bn="আমাদের সেবার কথা শুনতে Play চ�
 </p>
 
 
-<!--
-IMPORTANT:
-voice.mp3 MUST be in the SAME folder as index.html
--->
-
 <audio
 id="voiceAudio"
 preload="metadata">
@@ -1146,8 +1192,6 @@ step="0.05">
 
 </div>
 
-
-<!-- BACKUP AUDIO PLAYER -->
 
 <audio
 class="native-audio"
@@ -1806,9 +1850,7 @@ rel="noopener">
 
 
 
-<!-- =========================
-     GOOGLE MAP
-========================= -->
+<!-- GOOGLE MAP -->
 
 <div class="map-box">
 
