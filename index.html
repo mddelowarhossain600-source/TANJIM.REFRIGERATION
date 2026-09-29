@@ -88,8 +88,7 @@ html{
 body{
     font-family:Arial,"Noto Sans Bengali",sans-serif;
 
-    /* DESKTOP BACKGROUND */
-   background:#EEF7FB;
+    background:#EEF7FB;
 
     color:#172033;
     line-height:1.6;
@@ -181,12 +180,6 @@ nav a{
 ========================= */
 
 .hero{
-    /*
-       Background image comes from BODY.
-       Hero itself is transparent so the
-       desktop/mobile background remains visible.
-    */
-
     background:rgba(255,255,255,.18);
 }
 
@@ -251,6 +244,11 @@ nav a{
 
 .media{
     display:grid;
+
+    /* Slider + Voice full width,
+       two videos পাশাপাশি */
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
     gap:18px;
 }
 
@@ -260,6 +258,14 @@ nav a{
     overflow:hidden;
     box-shadow:0 7px 25px rgba(0,0,0,.09);
     border:1px solid #e1e9f2;
+}
+
+
+/* Slider এবং Voice পুরো width */
+
+.media > .slider,
+.media > .voice{
+    grid-column:1 / -1;
 }
 
 
@@ -422,6 +428,8 @@ nav a{
 
 .video{
     padding:12px;
+    width:100%;
+    min-width:0;
 }
 
 .video-title{
@@ -432,6 +440,7 @@ nav a{
 
 .video video{
     width:100%;
+    height:auto;
     border-radius:10px;
     background:#000;
 }
@@ -711,7 +720,7 @@ footer{
 
 
 /* =========================
-   MOBILE
+   TABLET
 ========================= */
 
 @media(max-width:900px){
@@ -731,25 +740,11 @@ footer{
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
-
-    body{
-
-        /* MOBILE BACKGROUND */
-        background-image:url("mobile-bg.jpg");
-
-        background-position:center top;
-        background-size:cover;
-        background-repeat:no-repeat;
-
-        /*
-           Keep background fixed while page scrolls.
-           If a particular mobile browser does not support
-           fixed background, it will automatically behave
-           normally.
-        */
-        background-attachment:fixed;
-    }
 
     .nav{
         flex-direction:column;
@@ -773,6 +768,35 @@ footer{
 
     .slider{
         height:270px;
+    }
+
+    /*
+       দুইটি ভিডিও পাশাপাশি থাকবে
+       মোবাইলেও 50% + 50%
+    */
+
+    .media{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .media > .slider,
+    .media > .voice{
+        grid-column:1 / -1;
+    }
+
+    .video{
+        padding:8px;
+    }
+
+    .video-title{
+        font-size:13px;
+        padding:3px 0 7px;
+    }
+
+    .video video{
+        width:100%;
+        height:auto;
     }
 
     .services,
@@ -800,6 +824,27 @@ footer{
 
     .map-box iframe{
         height:280px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media(max-width:380px){
+
+    .media{
+        gap:6px;
+    }
+
+    .video{
+        padding:6px;
+    }
+
+    .video-title{
+        font-size:12px;
     }
 
 }
@@ -931,9 +976,6 @@ class="btn whatsapp"
 href="https://wa.me/8801737995760"
 target="_blank"
 rel="noopener">
-
-
-<!-- WHATSAPP SVG -->
 
 <svg
 class="whatsapp-icon"
